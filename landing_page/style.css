@@ -3,34 +3,23 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
 }
 
 header {
     position: relative;
     height: 100vh;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    background: url('https://greenstories.co.in/wp-content/uploads/2021/06/Environmental-Technology.png') no-repeat center center/cover;
 }
 
 .intro {
     position: relative;
     width: 100%;
     height: 100%;
-}
-
-.cover-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
 .overlay {
@@ -39,163 +28,119 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 .intro-content {
+    position: relative;
     z-index: 2;
-    position: relative; /* Add this line */
+    text-align: center;
 }
 
-button {
-    position: relative; /* Add this line */
-    z-index: 3; /* Add this line */
-    /* Existing button styles */
-}
-
-header h1 {
+.intro h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
-    margin: 0.5rem 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3em;
+    margin: 0;
 }
 
-header p {
-    font-size: 1.5rem;
-    margin: 0.5rem 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.intro p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-    border-bottom: 2px solid white;
-    color: #ff5a5f;
+    font-weight: bold;
 }
 
 button {
-    background-color: #ff5a5f;
-    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background: #007BFF;
     border: none;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #e04848;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: #0056b3;
 }
 
-section {
-    padding: 4rem 2rem;
+.features-section, .about-section {
+    padding: 50px 20px;
     text-align: center;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
-.features-section {
-    background-color: #f8f9fa;
 }
 
 .features {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
 }
 
 .feature {
-    flex: 1 1 300px;
-    margin: 1rem;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .feature img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.feature img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .feature h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin: 1rem 0;
-}
-
-.feature p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
+    margin: 15px 0 10px;
 }
 
 .about-section ul {
     list-style: none;
     padding: 0;
-    margin: 2rem 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-.about-section ul li {
-    margin: 0.5rem 0;
-}
-
-.about-section ul li a {
-    color: #ff5a5f;
+.about-section ul a {
+    color: #007BFF;
     text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
 }
 
-.about-section ul li a:hover {
-    color: #e04848;
+.about-section ul a:hover {
+    text-decoration: underline;
 }
 
-footer {
-    background-color: #343a40;
-    padding: 2rem 0;
-    text-align: center;
-    color: white;
+.about-section p {
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        max-width: 90%;
+    }
+
+    .intro h1 {
+        font-size: 2.5em;
+    }
 }
